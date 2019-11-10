@@ -13,6 +13,7 @@
 		DFBD38732377EC1100919856 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFBD38722377EC1100919856 /* Assets.xcassets */; };
 		DFBD38762377EC1100919856 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFBD38752377EC1100919856 /* Preview Assets.xcassets */; };
 		DFBD38792377EC1100919856 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFBD38772377EC1100919856 /* LaunchScreen.storyboard */; };
+		DFBD38812377EC3000919856 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD38802377EC3000919856 /* MainController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DFBD38752377EC1100919856 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DFBD38782377EC1100919856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFBD387A2377EC1100919856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFBD38802377EC3000919856 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				DFBD38722377EC1100919856 /* Assets.xcassets */,
 				DFBD38772377EC1100919856 /* LaunchScreen.storyboard */,
 				DFBD387A2377EC1100919856 /* Info.plist */,
+				DFBD38802377EC3000919856 /* MainController.swift */,
 				DFBD38742377EC1100919856 /* Preview Content */,
 			);
 			path = "HWS-Day33";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFBD38812377EC3000919856 /* MainController.swift in Sources */,
 				DFBD386D2377EC0B00919856 /* AppDelegate.swift in Sources */,
 				DFBD386F2377EC0B00919856 /* SceneDelegate.swift in Sources */,
 				DFBD38712377EC0B00919856 /* ContentView.swift in Sources */,
