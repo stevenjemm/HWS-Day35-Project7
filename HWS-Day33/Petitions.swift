@@ -11,3 +11,8 @@ import Foundation
 struct Petitions: Codable {
     var results: [Petition]
 }
+
+enum PetitionType {
+    case mostRecent
+    case popular
+}

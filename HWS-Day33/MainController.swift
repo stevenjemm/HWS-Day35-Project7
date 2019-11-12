@@ -17,14 +17,16 @@ class MainController: UITabBarController {
         super.viewDidLoad()
         
         viewControllers = [
-            createNavController(viewController: ListViewController(), title: "Steven", imageName: "")
+            createNavController(viewController: ListViewController(infoType: .mostRecent), title: "Most Recent", imageName: ""),
+            createNavController(viewController: ListViewController(infoType: .popular), title: "Popular", imageName: "")
         ]
     }
     
-    fileprivate func createNavController(viewController: UIViewController, title: String, imageName: String) -> UIViewController {
+    fileprivate func createNavController(viewController: UIViewController, title: String, imageName: String, systemItem: UITabBarItem.SystemItem? = nil) -> UIViewController {
         viewController.view.backgroundColor = .white
         viewController.navigationItem.title = title
         let navController = UINavigationController(rootViewController: viewController)
+
         navController.tabBarItem.title = title
         navController.tabBarItem.image = UIImage(named: imageName)
         navController.navigationBar.prefersLargeTitles = true
