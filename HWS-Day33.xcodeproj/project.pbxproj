@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF079DF7237A869600B3F3AB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF079DF6237A869600B3F3AB /* DetailViewController.swift */; };
 		DFBD386D2377EC0B00919856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD386C2377EC0B00919856 /* AppDelegate.swift */; };
 		DFBD386F2377EC0B00919856 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD386E2377EC0B00919856 /* SceneDelegate.swift */; };
 		DFBD38712377EC0B00919856 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD38702377EC0B00919856 /* ContentView.swift */; };
@@ -14,9 +15,13 @@
 		DFBD38762377EC1100919856 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFBD38752377EC1100919856 /* Preview Assets.xcassets */; };
 		DFBD38792377EC1100919856 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFBD38772377EC1100919856 /* LaunchScreen.storyboard */; };
 		DFBD38812377EC3000919856 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD38802377EC3000919856 /* MainController.swift */; };
+		DFBD38832378617E00919856 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD38822378617E00919856 /* ListViewController.swift */; };
+		DFBD3885237A1A3A00919856 /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD3884237A1A3900919856 /* Petition.swift */; };
+		DFBD3887237A1AB100919856 /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBD3886237A1AB100919856 /* Petitions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF079DF6237A869600B3F3AB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DFBD38692377EC0B00919856 /* HWS-Day33.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HWS-Day33.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFBD386C2377EC0B00919856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFBD386E2377EC0B00919856 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,9 @@
 		DFBD38782377EC1100919856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFBD387A2377EC1100919856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFBD38802377EC3000919856 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		DFBD38822378617E00919856 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		DFBD3884237A1A3900919856 /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
+		DFBD3886237A1AB100919856 /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,10 @@
 				DFBD38772377EC1100919856 /* LaunchScreen.storyboard */,
 				DFBD387A2377EC1100919856 /* Info.plist */,
 				DFBD38802377EC3000919856 /* MainController.swift */,
+				DFBD3884237A1A3900919856 /* Petition.swift */,
+				DFBD3886237A1AB100919856 /* Petitions.swift */,
+				DFBD38822378617E00919856 /* ListViewController.swift */,
+				DF079DF6237A869600B3F3AB /* DetailViewController.swift */,
 				DFBD38742377EC1100919856 /* Preview Content */,
 			);
 			path = "HWS-Day33";
@@ -152,7 +164,11 @@
 				DFBD38812377EC3000919856 /* MainController.swift in Sources */,
 				DFBD386D2377EC0B00919856 /* AppDelegate.swift in Sources */,
 				DFBD386F2377EC0B00919856 /* SceneDelegate.swift in Sources */,
+				DFBD38832378617E00919856 /* ListViewController.swift in Sources */,
 				DFBD38712377EC0B00919856 /* ContentView.swift in Sources */,
+				DFBD3887237A1AB100919856 /* Petitions.swift in Sources */,
+				DFBD3885237A1A3A00919856 /* Petition.swift in Sources */,
+				DF079DF7237A869600B3F3AB /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

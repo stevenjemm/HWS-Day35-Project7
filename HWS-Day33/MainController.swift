@@ -8,14 +8,29 @@
 
 import UIKit
 
-class MainController: UIViewController {
+class MainController: UITabBarController {
+    
+    private let reuseIdentifier = "cellId"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemYellow
         
+        viewControllers = [
+            createNavController(viewController: ListViewController(), title: "Steven", imageName: "")
+        ]
     }
     
+    fileprivate func createNavController(viewController: UIViewController, title: String, imageName: String) -> UIViewController {
+        viewController.view.backgroundColor = .white
+        viewController.navigationItem.title = title
+        let navController = UINavigationController(rootViewController: viewController)
+        navController.tabBarItem.title = title
+        navController.tabBarItem.image = UIImage(named: imageName)
+        navController.navigationBar.prefersLargeTitles = true
+        
+        return navController
+    }
 }
 
 import SwiftUI
@@ -27,8 +42,8 @@ struct MainPreview: PreviewProvider {
     
     struct ContainerView: UIViewControllerRepresentable {
         func makeUIViewController(context: UIViewControllerRepresentableContext<MainPreview.ContainerView>) -> UIViewController {
-            let navController = UINavigationController(rootViewController: MainController())
-            return navController
+//            let navController = UINavigationController(rootViewController: MainController())
+            return MainController()
         }
         
         func updateUIViewController(_ uiViewController: MainPreview.ContainerView.UIViewControllerType, context: UIViewControllerRepresentableContext<MainPreview.ContainerView>) {
