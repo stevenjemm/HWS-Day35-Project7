@@ -22,7 +22,7 @@
 
 /* Begin PBXFileReference section */
 		DF079DF6237A869600B3F3AB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		DFBD38692377EC0B00919856 /* HWS-Day33.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HWS-Day33.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFBD38692377EC0B00919856 /* HWS-Day39-Project9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HWS-Day39-Project9.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFBD386C2377EC0B00919856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFBD386E2377EC0B00919856 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DFBD38702377EC0B00919856 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		DFBD386A2377EC0B00919856 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DFBD38692377EC0B00919856 /* HWS-Day33.app */,
+				DFBD38692377EC0B00919856 /* HWS-Day39-Project9.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,7 +107,7 @@
 			);
 			name = "HWS-Day33";
 			productName = "HWS-Day33";
-			productReference = DFBD38692377EC0B00919856 /* HWS-Day33.app */;
+			productReference = DFBD38692377EC0B00919856 /* HWS-Day39-Project9.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -313,8 +313,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lagom-exp.HWS-Day33";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lagom-exp.HWS-Day39-Project9";
+				PRODUCT_NAME = "HWS-Day39-Project9";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -333,8 +333,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lagom-exp.HWS-Day33";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lagom-exp.HWS-Day39-Project9";
+				PRODUCT_NAME = "HWS-Day39-Project9";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

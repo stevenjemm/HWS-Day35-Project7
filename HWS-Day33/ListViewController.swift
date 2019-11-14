@@ -38,6 +38,10 @@ class ListViewController: UITableViewController {
         
         configureTableView()
         
+        performSelector(inBackground: #selector(fetchJSON), with: nil)
+    }
+    
+    @objc func fetchJSON() {
         let urlString: String
         
         switch infoType {
@@ -48,7 +52,6 @@ class ListViewController: UITableViewController {
         case .none:
             urlString = ""
         }
-         
         
         if let url = URL(string: urlString) {
             if let data = try? Data(contentsOf: url) {
@@ -56,8 +59,9 @@ class ListViewController: UITableViewController {
                 return
             }
         }
-        showError()
         
+        performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
+           
     }
     
     func parse(json: Data) {
@@ -65,15 +69,20 @@ class ListViewController: UITableViewController {
         if let jsonPetitions = try? decoder.decode(Petitions.self, from: json) {
             petitions = jsonPetitions.results
             filteredPetitions = petitions
-            tableView.reloadData()
-    }
+            
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
+        } else {
+            performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
+        }
     }
     
     @objc func showCredit() {
         showAlert(title: "Give credit", message: "This data comes from the We The People API of the Whitehouse.", type: .credit)
     }
     
-    func showError() {
+    @objc func showError() {
         showAlert(title: "Loading Error", message: "There was a problem loading the feed. Please check your connection and try again.", type: .error)
     }
     
@@ -101,12 +110,20 @@ class ListViewController: UITableViewController {
         
         ac.addAction(.init(title: "OK", style: .default, handler: { action in
             if let textField = textField, let text = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !text.isEmpty {
-                self.filteredPetitions = self.petitions.filter({ return $0.title.lowercased().contains(text.lowercased())})
-                print("Petitions: ", self.filteredPetitions)
-                self.tableView.reloadData()
+                
+                DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+                    if let petitions = self?.petitions {
+                        self?.filteredPetitions = petitions.filter({ return $0.title.lowercased().contains(text.lowercased())})
+
+                        DispatchQueue.main.async { [weak self] in
+                            self?.tableView.reloadData()
+                        }
+                    }
+                }
+
             }
         }))
-            
+        
         present(ac, animated: true, completion: nil)
     }
     
